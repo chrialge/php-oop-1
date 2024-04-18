@@ -1,43 +1,25 @@
-<?php
+<!doctype html>
+<html lang='en'>
 
-// creo una classe con il nome production
-class Production
-{
+<head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
 
-    // creouna funzione di costrutto dove prendo i parametri e li inserisco dell'istanta con la sua key
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+    <title>Document</title>
+    <link href='./assets/css/style.css' rel='stylesheet'>
+</head>
 
-    function __construct(public string $title, public string $language, public int $vote)
-    {
-        $this->title = $title;
-        $this->language = $language;
-        $this->vote = $vote;
-    }
-}
+<body>
+    <div id='app'>
+        <h1>Hello World</h1>
+    </div>
+    <!-- Development only cdn, disable in production -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.8/axios.min.js' integrity='sha512-PJa3oQSLWRB7wHZ7GQ/g+qyv6r4mbuhmiDb8BjSFZ8NZ2a42oTtAq5n0ucWAwcQDlikAtkub+tPVCw4np27WCg==' crossorigin='anonymous' referrerpolicy='no-referrer'></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+    <script src='https://unpkg.com/vue@3/dist/vue.global.js'></script>
+    <script src='./assets/js/app.js'></script>
+</body>
 
-
-/**
- * creo una variabile che crea un istanza con il nome della varibile e gli passa tre valori che verrano poi assegnati all' istanza
- */
-$hammer = new Production("Hammer", "eng", rand(1, 10));
-
-// richiamo il valore title nell'istanza hammer
-echo $hammer->title;
-// dumbo per vedere cosa ce dentro all'istanza di hammer
-var_dump($hammer);
-// inserisco il contenuto dell'istanza ad un array
-$array[] = $hammer;
-
-/**
- * creo una variabile che crea un istanza con il nome della varibile e gli passa tre valori che verrano poi assegnati all' istanza
- */
-$sword = new Production("sword", "it", rand(1, 10));
-
-// dumbo per vedere cosa che dentro l'istanza di sword
-var_dump($sword);
-// inserisco il contenuto dell'istanza all array
-$array[] = $sword;
-
-
-
-// dumbo il contenuto dell'array
-var_dump($array);
+</html>
