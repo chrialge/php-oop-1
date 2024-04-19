@@ -32,10 +32,28 @@ $productions = [
 
 
 
-$movie = new Movie("Matrix", "eng", rand(1, 10), new Genre('action', "lorem ipsun doroe co son tu"), "./assets/img/hammer.jpg", 3000, 95);
-$movie->setTime();
-$movie->setPrice();
-var_dump($movie);
+$movie_matrix = new Movie("Matrix", "eng", rand(1, 10), new Genre('action', "lorem ipsun doroe co son tu"), "./assets/img/hammer.jpg", 3000, 95);
+$movie_matrix->setTime();
+$movie_matrix->setPrice();
+
+$movie_avatar = new Movie("Avatar", "eng", rand(1, 10), new Genre('action', "lorem ipsun doroe co son tu"), "./assets/img/hammer.jpg", 3000, 95);
+$movie_avatar->setTime();
+$movie_avatar->setPrice();
+
+$movie_bee_movie = new Movie("Bee moovie", "eng", rand(1, 10), new Genre('action', "lorem ipsun doroe co son tu"),  "./assets/img/hammer.jpg", 3000, 95);
+$movie_bee_movie->setTime();
+$movie_bee_movie->setPrice();
+
+$movie_il_padrino = new Movie("il padrino", "eng", rand(1, 10), new Genre('action', "lorem ipsun doroe co son tu"), "./assets/img/hammer.jpg", 3000, 95);
+$movie_il_padrino->setTime();
+$movie_il_padrino->setPrice();
+
+
 
 $tvserie = new TVserie("Bloom", "eng", rand(1, 10), new Genre('action', "lorem ipsun doroe co son tu"), "./assets/img/gun.jpg", 4);
+var_dump($movie);
+
+
+
+
 var_dump($tvserie);
