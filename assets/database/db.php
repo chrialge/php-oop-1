@@ -5,7 +5,7 @@ require_once __DIR__ . '/../models/Production.php';
 require_once __DIR__ . '/../models/Genre.php';
 
 // creo una classe con il nome production
-$array = [
+$productions = [
     $matrix = new Production("Matrix", "eng", rand(1, 10), new Genre('action', "lorem ipsun doroe co son tu"), "./assets/img/hammer.jpg"),
     $avatar = new Production("Avatar", "eng", rand(1, 10), new Genre('action', "lorem ipsun doroe co son tu"), "./assets/img/sword.jpg"),
     $bee_movie = new Production("Bee moovie", "eng", rand(1, 10), new Genre('action', "lorem ipsun doroe co son tu"), "./assets/img/shield.avif"),
@@ -17,9 +17,49 @@ $array = [
 ];
 
 
-// inserisco il contenuto dell'istanza all array
+// inserisco il contenuto dell'istanza all'$productions
 
-header('Content-type: application/json');
 
-// dumbo il contenuto dell'array
-echo json_encode($array);
+// header('Content-type: application/json');
+
+// dumbo il contenuto dell'$productions
+// echo json_encode($productions);
+
+class Movie
+{
+    public function __construct(public int $profits, public $time)
+    {
+        $this->profits = $profits;
+        $this->time = $time;
+    }
+
+    public function setTime()
+    {
+        if ($this->time >= 60) {
+            $hour = $this->time / 60;
+            $this->time -= ($hour * 60);
+        } else {
+            $this->time = $this->time;
+        }
+    }
+
+    public function getTime()
+    {
+        return '0 : ' . $this->time;
+    }
+}
+
+$movie = new Movie(3000, 60);
+var_dump($movie);
+
+class TVserie
+{
+    public function __construct(public string $season)
+    {
+        $this->season = $season;
+    }
+}
+
+$tvserie = new TVserie(4);
+
+var_dump($tvserie);
