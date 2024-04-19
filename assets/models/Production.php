@@ -4,9 +4,13 @@
 class Production
 {
     public $genre;
+    public $title;
+    public $language;
+    public $vote;
+    public $image;
     // creouna funzione di costrutto dove prendo i parametri e li inserisco dell'istanta con la sua key
 
-    function __construct(public string $title, public string $language, public int $vote, genre $genre, public string $image)
+    function __construct(string $title, string $language, int $vote, Genre $genre, string $image)
     {
         $this->title = $title;
         $this->language = $language;
