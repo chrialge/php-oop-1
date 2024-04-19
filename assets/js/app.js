@@ -20,12 +20,13 @@ createApp({
 
     },
     mounted() {
-        // axios.get('db.php')
-        //     .then(response => {
-        //         console.log(response.data);
-        //         this.productions = response.data;
-        //     }).catch((err) => {
-        //         console.log(err.message);
-        //     })
+        axios.get('./assets/database/db.php')
+            .then(response => {
+                console.log(response.data);
+                this.productions = response.data;
+                console.log(this.productions.length)
+            }).catch((err) => {
+                console.log(err.message);
+            })
     }
 }).mount('#app')

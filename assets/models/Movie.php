@@ -13,7 +13,7 @@ class Movie extends Production
     {
 
         $this->profits = $this->profits;
-        $this->profits = number_format($this->profits, 0, '', '.');
+        $this->profits = number_format($this->profits, 4, '', '.');
     }
 
 
@@ -26,10 +26,5 @@ class Movie extends Production
         } else {
             $this->time = '0 : ' . strval($this->time);
         }
-    }
-
-    public function getTime()
-    {
-        return;
     }
 }
