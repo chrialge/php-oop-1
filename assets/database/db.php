@@ -33,23 +33,30 @@ class Movie
         $this->time = $time;
     }
 
+
+
     public function setTime()
     {
         if ($this->time >= 60) {
-            $hour = $this->time / 60;
+            $hour = floor($this->time / 60);
             $this->time -= ($hour * 60);
+            $this->time = strval($hour) . ' : ' . strval($this->time);
         } else {
-            $this->time = $this->time;
+            $this->time = '0 : ' . strval($this->time);
         }
     }
 
     public function getTime()
     {
-        return '0 : ' . $this->time;
+        return;
     }
 }
 
-$movie = new Movie(3000, 60);
+
+
+$movie = new Movie(3000, 95);
+$movie->setTime();
+$movie->getTime();
 var_dump($movie);
 
 class TVserie
