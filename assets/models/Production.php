@@ -1,8 +1,16 @@
 <?php
 
 
+/**
+ * Production Class
+ * @author Christian Algieri
+ * @copyright 2024 Christian Algieri
+ * @license MIT
+ */
+
 class Production
 {
+    // dichiaro le istanze
     public $genre;
     public $title;
     public $language;
@@ -12,6 +20,7 @@ class Production
 
     function __construct(string $title, string $language, int $vote, Genre $genre, string $image)
     {
+        // assegno i valori alle istanze
         $this->title = $title;
         $this->language = $language;
         $this->vote = $vote;
