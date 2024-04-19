@@ -39,8 +39,8 @@ class Movie
     {
         if ($this->time >= 60) {
             $hour = floor($this->time / 60);
-            $this->time -= ($hour * 60);
-            $this->time = strval($hour) . ' : ' . strval($this->time);
+            $minuts = $this->time - ($hour * 60);
+            $this->time = strval($hour) . ' : ' . strval($minuts);
         } else {
             $this->time = '0 : ' . strval($this->time);
         }
